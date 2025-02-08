@@ -7,7 +7,7 @@ const Navbar = () => {
   const menuItems = [
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
-    { title: 'Admissions', path: '/admissions' },
+    { title: 'Admissions', path: '/admission' },
     { title: 'Academics', path: '/academics' },
     { title: 'Facilities', path: '/Facilities' },
     { title: 'Activities', path: '/activities' },

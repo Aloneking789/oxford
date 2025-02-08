@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Announcements from '../components/Announcements';
 import Highlights from '../components/Highlights';
 import QuickLinks from '../components/QuickLinks';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -28,10 +29,10 @@ const Home = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="/about" className="hover:text-blue-300">About Us</a></li>
-                <li><a href="/admissions" className="hover:text-blue-300">Admissions</a></li>
-                <li><a href="/academics" className="hover:text-blue-300">Academics</a></li>
-                <li><a href="/contact" className="hover:text-blue-300">Contact</a></li>
+                <li><Link to="/about" className="hover:text-blue-300">About Us</Link></li>
+                <li><Link to="/admission" className="hover:text-blue-300">Admissions</Link></li>
+                <li><Link to="/academics" className="hover:text-blue-300">Academics</Link></li>
+                <li><Link to="/contact" className="hover:text-blue-300">Contact</Link></li>
               </ul>
             </div>
             <div>

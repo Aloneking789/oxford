@@ -1,6 +1,6 @@
-import React from "react";
-import { ClipboardList, Calendar, CreditCard, FileText, Users } from "lucide-react";
-import Navbar from "../components/Navbar";
+import React from 'react';
+import { ClipboardList, Calendar, CreditCard, FileText,Users } from 'lucide-react';
+import Navbar from '../components/Navbar';
 
 // Admission Steps Data
 const admissionSteps = [
