@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClipboardList, Calendar, CreditCard, FileText } from 'lucide-react';
+import { ClipboardList, Calendar, CreditCard, FileText,Users } from 'lucide-react';
 import Navbar from '../components/Navbar';
 
 const Admission = () => {
