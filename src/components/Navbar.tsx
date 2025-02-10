@@ -1,14 +1,45 @@
 import React from 'react';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X, GraduationCap, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null);
 
   const menuItems = [
-    { title: 'Home', path: '/' },
-    { title: 'About', path: '/about' },
-    { title: 'Admissions', path: '/admission' },
-    { title: 'Academics', path: '/academics' },
+    { 
+      title: 'Home', 
+      path: '/' 
+    },
+    { 
+      title: 'About',
+      path: '/about',
+      dropdown: [
+        // { title: 'About Us', path: '/about/about-us' },
+        { title: 'Our Mission', path: '/about/mission' },
+        { title: 'Director Message', path: '/about/director-message' },
+        { title: 'Principal Message', path: '/about/principal-message' },
+        { title: 'Our Faculties', path: '/about/faculties' },
+      ]
+    },
+    { 
+      title: 'Admissions',
+      path: '/admission',
+      dropdown: [
+        { title: 'Prospectus', path: '/admission/prospectus' },
+        { title: 'Admission Process', path: '/admission/process' },
+        { title: 'Fee Structure', path: '/admission/fees' },
+      ]
+    },
+    { 
+      title: 'Academics',
+      path: '/academics',
+      dropdown: [
+        { title: 'Curriculum', path: '/academics/curriculum' },
+        { title: 'Academic Calendar', path: '/academics/calendar' },
+        { title: 'Departments', path: '/academics/departments' },
+      ]
+    },
     { title: 'Facilities', path: '/Facilities' },
     { title: 'Activities', path: '/activities' },
     { title: 'Contact', path: '/contact' },
@@ -26,13 +57,30 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {menuItems.map((item) => (
-                <a
-                  key={item.title}
-                  href={item.path}
-                  className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800"
-                >
-                  {item.title}
-                </a>
+                <div key={item.title} className="relative"
+                     onMouseEnter={() => setActiveDropdown(item.title)}
+                     onMouseLeave={() => setActiveDropdown(null)}>
+                  <Link
+                    to={item.path}
+                    className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 flex items-center"
+                  >
+                    {item.title}
+                    {item.dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
+                  </Link>
+                  {item.dropdown && activeDropdown === item.title && (
+                    <div className="absolute z-50 left-0 mt-2 w-48 bg-blue-900 rounded-md shadow-lg">
+                      {item.dropdown.map((dropItem) => (
+                        <Link
+                          key={dropItem.title}
+                          to={dropItem.path}
+                          className="block px-4 py-2 text-sm hover:bg-blue-800"
+                        >
+                          {dropItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -52,13 +100,31 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menuItems.map((item) => (
-              <a
-                key={item.title}
-                href={item.path}
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-800"
-              >
-                {item.title}
-              </a>
+              <div key={item.title}>
+                <Link
+                  to={item.path}
+                  className="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-800"
+                  onClick={() => item.dropdown && setActiveDropdown(activeDropdown === item.title ? null : item.title)}
+                >
+                  <div className="flex justify-between items-center">
+                    {item.title}
+                    {item.dropdown && <ChevronDown className="h-4 w-4" />}
+                  </div>
+                </Link>
+                {item.dropdown && activeDropdown === item.title && (
+                  <div className="pl-4 space-y-1">
+                    {item.dropdown.map((dropItem) => (
+                      <Link
+                        key={dropItem.title}
+                        to={dropItem.path}
+                        className="block px-3 py-2 text-sm hover:bg-blue-800"
+                      >
+                        {dropItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
