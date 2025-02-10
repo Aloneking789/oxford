@@ -1,6 +1,6 @@
 import React from 'react'
 
-const director = () => {
+const DirectorMessage = () => {
   return (
     <div>
       director
@@ -8,4 +8,4 @@ const director = () => {
   )
 }
 
-export default director
+export default DirectorMessage;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const fee = () => {
+const FeeStructure = () => {
   return (
     <div>
       fee
@@ -8,4 +8,4 @@ const fee = () => {
   )
 }
 
-export default fee
+export default FeeStructure

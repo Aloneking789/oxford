@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null);
+  // Ref for storing the timeout id
+  const hideTimeout = React.useRef<number>();
 
   const menuItems = [
     { 
@@ -15,7 +17,6 @@ const Navbar = () => {
       title: 'About',
       path: '/about',
       dropdown: [
-        // { title: 'About Us', path: '/about/about-us' },
         { title: 'Our Mission', path: '/about/mission' },
         { title: 'Director Message', path: '/about/director-message' },
         { title: 'Principal Message', path: '/about/principal-message' },
@@ -45,6 +46,21 @@ const Navbar = () => {
     { title: 'Contact', path: '/contact' },
   ];
 
+  const handleMouseEnter = (itemTitle: string) => {
+    // Clear any pending timeout and set active dropdown immediately
+    if (hideTimeout.current) {
+      clearTimeout(hideTimeout.current);
+    }
+    setActiveDropdown(itemTitle);
+  };
+
+  const handleMouseLeave = () => {
+    // Add a delay before hiding the dropdown.
+    hideTimeout.current = window.setTimeout(() => {
+      setActiveDropdown(null);
+    }, 300); // 300ms delay; adjust as needed
+  };
+
   return (
     <nav className="bg-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,9 +73,12 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {menuItems.map((item) => (
-                <div key={item.title} className="relative"
-                     onMouseEnter={() => setActiveDropdown(item.title)}
-                     onMouseLeave={() => setActiveDropdown(null)}>
+                <div 
+                  key={item.title} 
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(item.title)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <Link
                     to={item.path}
                     className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 flex items-center"

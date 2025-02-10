@@ -1,6 +1,6 @@
 import React from 'react'
 
-const principal = () => {
+const PrincipalMessage = () => {
   return (
     <div>
       prinncipal
@@ -8,4 +8,4 @@ const principal = () => {
   )
 }
 
-export default principal
+export default PrincipalMessage

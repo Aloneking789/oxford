@@ -8,14 +8,14 @@ import Activities from './pages/Activities';
 import Contact from './pages/Contact';
 import Facilities from './pages/Facilities';
 import Calendar from './subpages/Calender';
-// import Curriculum from './subpages/curriculum';
-// import Departments from './subpages/departments';
-// import DirectorMessage from './subpages/director';
-// import Faculties from './subpages/faculties';
-// import Mission from './subpages/ourmission';
-// import PrincipalMessage from './subpages/principal';
-// import AdmissionProcess from './subpages/admission_process';
-// import FeeStructure from './subpages/fee';
+import Curriculum from './subpages/Curriculum';
+import Departments from './subpages/department';
+import DirectorMessage from './subpages/director';
+import Faculties from './subpages/faculties';
+import Mission from './subpages/ourmission';
+import PrincipalMessage from './subpages/principal';
+import AdmissionProcess from './subpages/admission_process';
+import FeeStructure from './subpages/fee';
 
 function App() {
   return (
@@ -29,14 +29,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/academics/calendar" element={<Calendar/>} />
-        {/* <Route path="/academics/curriculum" element={<Curriculum />} />
+        <Route path="/academics/curriculum" element={<Curriculum />} />
         <Route path="/academics/departments" element={<Departments />} />
         <Route path="/about/director-message" element={<DirectorMessage />} />
         <Route path="/about/faculties" element={<Faculties />} />
         <Route path="/about/mission" element={<Mission />} />
         <Route path="/about/principal-message" element={<PrincipalMessage />} />
         <Route path="/admission/process" element={<AdmissionProcess />} />
-        <Route path="/admission/fees" element={<FeeStructure />} /> */}
+        <Route path="/admission/fees" element={<FeeStructure />} />
       </Routes>
     </Router>
   );

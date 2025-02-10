@@ -1,6 +1,6 @@
 import React from 'react'
 
-const faculties = () => {
+const Faculties = () => {
   return (
     <div>
       faculties
@@ -8,4 +8,4 @@ const faculties = () => {
   )
 }
 
-export default faculties
+export default Faculties
