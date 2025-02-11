@@ -8,7 +8,7 @@ import Activities from './pages/Activities';
 import Contact from './pages/Contact';
 import Facilities from './pages/Facilities';
 import Calendar from './subpages/Calender';
-import Curriculum from './subpages/Curriculum';
+import Curriculum from './subpages/curriculum';
 import Departments from './subpages/department';
 import DirectorMessage from './subpages/director';
 import Faculties from './subpages/faculties';

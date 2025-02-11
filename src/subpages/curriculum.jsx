@@ -8,4 +8,4 @@ const Curriculum = () => {
   )
 }
 
-export default Curriculum
+export default Curriculum;
