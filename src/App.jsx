@@ -8,7 +8,7 @@ import Activities from './pages/Activities';
 import Contact from './pages/Contact';
 import Facilities from './pages/Facilities';
 import Calendar from './subpages/Calender';
-import Curriculum from './subpages/Curriculum';
+import curriculum from './subpages/curriculum';
 import Departments from './subpages/department';
 import DirectorMessage from './subpages/director';
 import Faculties from './subpages/faculties';
@@ -29,7 +29,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/academics/calendar" element={<Calendar/>} />
-        <Route path="/academics/curriculum" element={<Curriculum />} />
+        <Route path="/academics/curriculum" element={<curriculum />} />
         <Route path="/academics/departments" element={<Departments />} />
         <Route path="/about/director-message" element={<DirectorMessage />} />
         <Route path="/about/faculties" element={<Faculties />} />
