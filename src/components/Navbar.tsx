@@ -10,10 +10,10 @@ const Navbar = () => {
   // Top navbar items
   const topMenuItems = [
     { title: 'Our Results', path: '/results' },
-    { title: 'Mandatory Disclosure', path: '/disclosure' },
+    // { title: 'Mandatory Disclosure', path: '/disclosure' },
     { title: 'Testimonials', path: '/testimonials' },
     { title: 'Gallery', path: '/gallery' },
-    { title: 'Online Registration', path: '/registration', isNew: true },
+    { title: 'Online Registration', path: '/registeration', isNew: true },
   ];
 
   const menuItems = [
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <Link
                   key={item.title}
                   to={item.path}
-                  className="text-black-300 hover:text-white text-xs flex items-center"
+                  className="text-black-300 text-xs hover:text-white hover:text-[14px] flex items-center"
                 >
                   {item.title}
                   {item.isNew && (
