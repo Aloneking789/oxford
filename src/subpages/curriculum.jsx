@@ -1,6 +1,6 @@
 import React from 'react'
 
-const curriculum = () => {
+const Curriculum = () => {
   return (
     <div>
       <h1>Curriculum</h1>
@@ -8,4 +8,4 @@ const curriculum = () => {
   )
 }
 
-export default curriculum;
+export default Curriculum;
