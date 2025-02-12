@@ -16,8 +16,11 @@ import Mission from './subpages/ourmission';
 import PrincipalMessage from './subpages/principal';
 import AdmissionProcess from './subpages/admission_process';
 import FeeStructure from './subpages/fee';
-import ManagerMessage from './subpages/ManagerMessage';
-import prospectus from './subpages/prospectus';
+import Testimonials from './topbarpages/Testimonials';
+import Disclosure from './topbarpages/Disclosure';
+import Gallery from './topbarpages/Gallery';
+import OnlineRegisteration from './topbarpages/OnlineRegisteration';
+import Results from './topbarpages/Results';
 
 function App() {
   return (
@@ -30,6 +33,8 @@ function App() {
         <Route path="/activities" element={<Activities />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/facilities" element={<Facilities />} />
+
+
         <Route path="/academics/calendar" element={<Calendar/>} />
         <Route path="/academics/curriculum" element={<Curriculum />} />
         <Route path="/academics/departments" element={<Departments />} />
@@ -40,7 +45,13 @@ function App() {
         <Route path="/about/principal-message" element={<PrincipalMessage />} />
         <Route path="/admission/process" element={<AdmissionProcess />} />
         <Route path="/admission/fees" element={<FeeStructure />} />
-        <Route path="/admission/prospectus" element={<prospectus />} />
+
+
+        <Route path="/testimonials" element={<Testimonials />} />
+        {/* <Route path="/disclosure" element={<Disclosure />} /> */}
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/registeration" element={<OnlineRegisteration />} />
+        <Route path="/results" element={<Results />} />
       </Routes>
     </Router>
   );
