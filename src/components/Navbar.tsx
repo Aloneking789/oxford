@@ -21,13 +21,14 @@ const Navbar = () => {
         { title: 'Director Message', path: '/about/director-message' },
         { title: 'Principal Message', path: '/about/principal-message' },
         { title: 'Our Faculties', path: '/about/faculties' },
+        { title: 'Manager Message', path: '/about/manager-message' },
       ]
     },
     { 
       title: 'Admissions',
       path: '/admission',
       dropdown: [
-        { title: 'Prospectus', path: '/admission/prospectus' },
+        { title: 'prospectus', path: '/admission/prospectus' },
         { title: 'Admission Process', path: '/admission/process' },
         { title: 'Fee Structure', path: '/admission/fees' },
       ]

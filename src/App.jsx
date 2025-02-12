@@ -16,6 +16,8 @@ import Mission from './subpages/ourmission';
 import PrincipalMessage from './subpages/principal';
 import AdmissionProcess from './subpages/admission_process';
 import FeeStructure from './subpages/fee';
+import ManagerMessage from './subpages/ManagerMessage';
+import prospectus from './subpages/prospectus';
 
 function App() {
   return (
@@ -32,11 +34,13 @@ function App() {
         <Route path="/academics/curriculum" element={<Curriculum />} />
         <Route path="/academics/departments" element={<Departments />} />
         <Route path="/about/director-message" element={<DirectorMessage />} />
+        <Route path="/about/manager-message" element={<ManagerMessage />} />
         <Route path="/about/faculties" element={<Faculties />} />
         <Route path="/about/mission" element={<Mission />} />
         <Route path="/about/principal-message" element={<PrincipalMessage />} />
         <Route path="/admission/process" element={<AdmissionProcess />} />
         <Route path="/admission/fees" element={<FeeStructure />} />
+        <Route path="/admission/prospectus" element={<prospectus />} />
       </Routes>
     </Router>
   );

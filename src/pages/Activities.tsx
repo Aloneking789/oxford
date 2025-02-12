@@ -1,8 +1,28 @@
 import React from 'react';
 import Navbar from "../components/Navbar";
 import playschool from '../images/playschool.png';
-import primary from '../images/primary.png';
-import kind from '../images/kind.png';
+import kind from '../images/kind.png'
+import primary from '../images/primary.png'
+
+import a1 from '../images/a1.jpg';
+import a2 from '../images/a2.jpg';
+import a3 from '../images/a3.jpg';
+import a4 from '../images/a4.jpg';
+import a5 from '../images/a5.jpg';
+import a6 from '../images/a6.jpg';
+
+import { motion } from "framer-motion";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+
+
+
+const images = [a3, a2, a1,a4,a5,a6];
 
 
 const Activities = () => {
@@ -16,11 +36,17 @@ const Activities = () => {
       </div>
 
       {/* Activity Section */}
-      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-8 shadow-lg rounded-lg bg-white my-8">
+      <motion.div
+         
+       
+         initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }} className="max-w-7xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-8 ">
         
         {/* Text Content */}
         <div className="md:w-1/2 p-6">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">Play School</h1>
+          <h1 className="text-3xl font-bold  mb-4">Play School</h1>
           <p className="text-gray-700 leading-relaxed">
             A home away from home with a hygienic environment for the young ones, 
             U S Oxford Play School is a wonderful world of fun and learning. We plan and 
@@ -43,9 +69,15 @@ const Activities = () => {
           />
         </div>
 
-      </div>
+      </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-8 shadow-lg rounded-lg bg-white my-8">
+      <motion.div
+         
+       
+         initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }} className="max-w-7xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-8 ">
       <div className="md:w-1/2 flex justify-center">
           <img 
             src={kind} 
@@ -55,7 +87,7 @@ const Activities = () => {
         </div>
         {/* Text Content */}
         <div className="md:w-1/2 p-6">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">KINDERGARTEN</h1>
+          <h1 className="text-3xl font-bold  mb-4">KINDERGARTEN</h1>
           <p className="text-gray-700 leading-relaxed">
           The most important period of life is from birth to the age of 
 six where most of the learning happens. U S Oxford initial tests his 
@@ -77,13 +109,19 @@ balances child initiated and teacher' s scaffolded  activities.
        
         
 
-      </div>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-8 shadow-lg rounded-lg bg-white my-8">
+        <motion.div
+         
+       
+         initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }} className="max-w-7xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-8 ">
         
         {/* Text Content */}
         <div className="md:w-1/2 p-6">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">PRIMARY SCHOOL
+          <h1 className="text-3xl font-bold  mb-4">PRIMARY SCHOOL
           </h1>
           <p className="text-gray-700 leading-relaxed">
             A home away from home with a hygienic environment for the young ones, 
@@ -110,8 +148,30 @@ in all elds.
           />
         </div>
         
+        </motion.div>
 
-      </div>
+
+      <div className=" mx-auto my-8 flex justify-center items-center px-20">
+      <Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    spaceBetween={30}
+    slidesPerView={3} // Show one slide at a time for full-screen effect
+    navigation
+    pagination={{ clickable: true }}
+    autoplay={{ delay: 3000, disableOnInteraction: false }}
+    loop
+    className="w-full h-full"
+  >
+    {images.map((img, index) => (
+      <SwiperSlide key={index}>
+        <div className="w-full h-full flex justify-center items-center">
+          <img src={img} alt={`Slide ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+      
       <div className=''>
     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,6 +258,10 @@ competitions.
         </div>
 
       </div>
+
+   
+  
+
 
       <footer className="bg-blue-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
