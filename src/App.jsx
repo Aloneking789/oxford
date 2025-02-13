@@ -7,7 +7,7 @@ import Academics from './pages/Academics';
 import Activities from './pages/Activities';
 import Contact from './pages/Contact';
 import Facilities from './pages/Facilities';
-import Calendar from './subpages/Calender';
+import Calendar from './subpages/Calendar';
 import Curriculum from './subpages/curriculum';
 import Departments from './subpages/department';
 import DirectorMessage from './subpages/director';
@@ -21,6 +21,7 @@ import Disclosure from './topbarpages/Disclosure';
 import Gallery from './topbarpages/Gallery';
 import OnlineRegisteration from './topbarpages/OnlineRegisteration';
 import Results from './topbarpages/Results';
+import ManagerMessage from './subpages/ManagerMessage';
 
 function App() {
   return (

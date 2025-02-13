@@ -7,10 +7,7 @@ const DirectorMessage = () => {
     {
       name: " Mrs. Dr. Sangeeta Singh",
       position: "Chairperson",
-      qualification:`  fo|ka nnkfr fou;a]
- fou;kn~ ;kfr ik=krke~A
- ik=kRok)kuekIuksfr]
- èkkuk)eZa rr% lq[ke~AA`,
+      qualification:`  MA (English), B.Ed, Ph.D`,
       experience: "20+ years",
       image: chairman,
       title: `It gives me immense pleasure to welcome you all to the U S Oxford Academy. This Academy has 

@@ -18,8 +18,8 @@ const Faculties = () => {
       </div>
 
     <div className="flex justify-center items-center gap-10 py-12">
-  <img src={facalities1} alt="Facility 1" className="max-w-xs rounded-lg shadow-md  h-[500px]  min-w-96" />
-  <img src={facalities2} alt="Facility 2" className="max-w-xs rounded-lg shadow-md  h-[500px] min-w-96" />
+  {/* <img src={facalities1} alt="Facility 1" className="max-w-xs rounded-lg shadow-md  h-[500px]  min-w-96" />
+  <img src={facalities2} alt="Facility 2" className="max-w-xs rounded-lg shadow-md  h-[500px] min-w-96" /> */}
 </div>
 
 
