@@ -13,12 +13,15 @@
     "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.5",
     "lucide-react": "^0.344.0",
+    "motion": "^12.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-router-dom": "^6.29.0",
     "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1"
+    "react-swiper": "^0.1.5",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
-import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'
 import Footer from '../components/Footer';
 
 const OnlineRegistration = () => {

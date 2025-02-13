@@ -39,6 +39,7 @@ function App() {
         <Route path="/academics/curriculum" element={<Curriculum />} />
         <Route path="/academics/departments" element={<Departments />} />
         <Route path="/about/director-message" element={<DirectorMessage />} />
+        <Route path="/about/manager-message" element={<ManagerMessage />} />
         <Route path="/about/faculties" element={<Faculties />} />
         <Route path="/about/mission" element={<Mission />} />
         <Route path="/about/principal-message" element={<PrincipalMessage />} />
